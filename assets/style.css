@@ -1,61 +1,51 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
+
+
   h1 {
     text-align: center;
+    margin-bottom: 30px;
   }
   
   form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 30px auto;
-    max-width: 600px;
+    text-align: center;
   }
   
   label {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 20px;
   }
   
   input[type="date"] {
-    font-size: 16px;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+    padding: 6px;
   }
   
   button {
-    font-size: 18px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    font-size: 24px;
+    padding: 10px;
   }
   
-  .days {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    max-width: 600px;
+  #stop-procrastinating {
+    text-align: center;
+    margin: 30px;
+    font-size: 20px;
   }
   
   .day {
-    width: 20px;
-    height: 20px;
-    margin: 1px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
     border-radius: 50%;
-    background-color: #e9ecef;
+    background-color: #ccc;
   }
   
-  .day.passed {
-    background-color: #007bff;
+  .gone {
+    background-color: #ff7f7f;
+  }
+  
+  .left {
+    background-color: #7fff7f;
   }

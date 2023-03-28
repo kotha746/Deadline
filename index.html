@@ -1,22 +1,26 @@
+
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Deadline's Approaching!!</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <script defer src="script.js"></script>
+<head>
+  <title>Deadlines Approaching!!</title>
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body>
+  <h1>Deadlines Approaching!!</h1>
+  <form>
+    <label for="start-date">Start Date:</label>
+    <input type="date" id="start-date" name="start-date" required><br>
 
-  </head>
-  <body>
-    <h1>Deadline's Approaching!!</h1>
-    <form>
-      <label for="startDate">Start Date:</label>
-      <input type="date" id="startDate" name="startDate" required>
-      <label for="endDate">End Date:</label>
-      <input type="date" id="endDate" name="endDate" required>
-      <label for="today">Today's Date:</label>
-      <input type="date" id="today" name="today" required>
-      <button type="button" onclick="createVisualization()">Create Visualization</button>
-    </form>
-    <div class="days"></div>
-  </body>
+    <label for="end-date">End Date:</label>
+    <input type="date" id="end-date" name="end-date" required><br>
+
+    <button type="button" onclick="calculateDays()">Scare me!</button>
+  </form>
+
+  <div id="stop-procrastinating"></div>
+  <div id="visualization"></div>
+
+  <script src="script.js"></script>
+</body>
 </html>
