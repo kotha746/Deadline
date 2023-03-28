@@ -1,52 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Stress Inducer!!</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="assets/style.css" rel="stylesheet">
+    <title>Deadline's Approaching!!</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script defer src="script.js"></script>
+
   </head>
   <body>
-    <h1>Stress Inducer!!</h1>
-    <label for="startDate">Start Date:</label>
-    <input type="date" id="startDate" name="startDate" required>
-    <br>
-    <label for="endDate">End Date:</label>
-    <input type="date" id="endDate" name="endDate" required>
-    <br>
-    <label for="today">Today's Date:</label>
-    <input type="date" id="today" name="today" required>
-    <br>
-    <button onclick="createChart()">Create Visualization</button>
-    <canvas id="myChart"></canvas>
-
-    <script>
-      function createChart() {
-        // Get the input values
-        var startDate = new Date(document.getElementById("startDate").value);
-        var endDate = new Date(document.getElementById("endDate").value);
-        var today = new Date(document.getElementById("today").value);
-
-        // Calculate the remaining days
-        var remainingDays = Math.ceil((endDate - today) / (1000 * 60 * 60 * 24));
-
-        // Create a chart
-        var ctx = document.getElementById("myChart").getContext("2d");
-        var myChart = new Chart(ctx, {
-          type: "doughnut",
-          data: {
-            labels: ["Days Remaining", "Days Passed"],
-            datasets: [
-              {
-                label: "Days Left",
-                data: [remainingDays, 365 - remainingDays],
-                backgroundColor: ["#007bff", "#e9ecef"],
-                borderColor: "#ffffff",
-                borderWidth: 2,
-              },
-            ],
-          },
-        });
-      }
-    </script>
+    <h1>Deadline's Approaching!!</h1>
+    <form>
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate" name="startDate" required>
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" name="endDate" required>
+      <label for="today">Today's Date:</label>
+      <input type="date" id="today" name="today" required>
+      <button type="button" onclick="createVisualization()">Create Visualization</button>
+    </form>
+    <div class="days"></div>
   </body>
 </html>
