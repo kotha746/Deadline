@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project Time Visualization</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px auto;
+        max-width: 600px;
+      }
+
+      label {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      input[type="date"] {
+        font-size: 16px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+      }
+
+      button {
+        font-size: 18px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .days {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 600px;
+      }
+
+      .day {
+        width: 20px;
+        height: 20px;
+        margin: 1px;
+        border-radius: 50%;
+        background-color: #e9ecef;
+      }
+
+      .day.passed {
+        background-color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Project Time Visualization</h1>
+    <form>
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate" name="startDate" required>
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" name="endDate" required>
+      <label for="today">Today's Date:</label>
+      <input type="date" id="today" name="today" required>
+      <button type="button" onclick="createVisualization()">Create Visualization</button>
+    </form>
+    <div class="days"></div>
+    <script>
+      function createVisualization() {
+        // Get the input values
+        var startDate = new Date(document.getElementById("startDate").value);
+        var endDate = new Date(document.getElementById("endDate").value);
+        var today = new Date(document.getElementById("today").value);
+
+        // Calculate the remaining days and total days
+        var remainingDays = Math.ceil((endDate - today) / (1000 * 60 * 60 * 24));
+        var totalDays = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));
+
+        // Create an array of day elements
+        var daysDiv = document.querySelector(".days");
+        daysDiv.innerHTML = "";
+        for (var i = 0; i < totalDays; i++) {
+          var dayDiv = document.createElement("div");
+          dayDiv.classList.add("day");
+          if (i < totalDays - remainingDays) {
+            dayDiv.classList.add("passed");
+          }
+          daysDiv.appendChild(dayDiv);
+        }
+      }
+    </script>
+  </body>
+</html>
