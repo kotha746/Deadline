@@ -1,10 +1,18 @@
+
+
 function calculateDays() {
     const startDate = new Date(document.getElementById("start-date").value);
+
+
     const endDate = new Date(document.getElementById("end-date").value);
     const todayDate = new Date();
     const timeDiff = endDate.getTime() - startDate.getTime();
+
+    // copied code
     const totalDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
     const timeDiff2 = todayDate.getTime() - startDate.getTime();
+
+    
     const daysGone = Math.ceil(timeDiff2 / (1000 * 3600 * 24));
     const daysLeft = totalDays - daysGone;
   
@@ -24,3 +32,6 @@ function calculateDays() {
     }
     visualization.innerHTML = circles;
   }
+
+
+

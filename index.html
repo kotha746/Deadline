@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
   <title>Deadlines Approaching!!</title>
@@ -13,7 +13,8 @@
 
     <label for="start-date">Start Date:</label>
 
-    <input type="date" id="start-date" name="start-date" required><br>
+    <input type="date" id="start-date" name="start-date" required>
+    <br>
 
     <label for="end-date">End Date:</label>
     <input type="date" id="end-date" name="end-date" required>
@@ -29,6 +30,52 @@
   <div id="visualization"></div>
 
   
+  <script src="script.js"></script>
+
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Deadlines Approaching!!</title>
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <h1>Countdown to Action</h1>
+  
+  <div class="form-wrapper">
+  <form>
+
+    <label for="start-date">Start Date:</label>
+
+    <input type="date" id="start-date" name="start-date" required>
+    <br>
+
+    <label for="end-date">End Date:</label>
+    <input type="date" id="end-date" name="end-date" required>
+    <br>
+
+    <button type="button" onclick="calculateDays()">Scare me!</button>
+
+  </form>
+</div>
+
+
+  <div id="stop-procrastinating"></div>
+  
+<div class="form-wrapper align"> 
+  <div id="visualization"></div>
+
+</div>
+
   <script src="script.js"></script>
 
 

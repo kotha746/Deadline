@@ -1,4 +1,4 @@
-h1 {
+/* h1 {
   text-align: center;
   margin-bottom: 30px;
 }
@@ -45,5 +45,106 @@ button {
 }
 
 .left {
-  background-color: #7fff7f;
+  background-color: #949494;
+} */
+
+body {
+  background-color: #FFFFFF;
+  font-family: 'Spline Sans Mono', monospace;
 }
+
+h1 {
+  text-align: center;
+  /* margin-bottom: 30px; */
+  color: #FF6666;
+  font-size: 100px;
+}
+
+form {
+  text-align: center;
+  /* margin-left: 400px; */
+}
+
+label {
+  font-size: 20px;
+  color: #8D8D8D;
+  
+  
+}
+
+.form-wrapper {
+  background-color: #F8F8FA;
+  margin: 20px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+input[type="date"] {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+  padding: 6px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+  color: #333333;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: #FF6666;
+  color: #fff;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #000000;
+}
+
+#stop-procrastinating {
+  text-align: center;
+  margin: 30px;
+  font-size: 30px;
+  color: #000000;
+}
+
+.day {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: all 0.3s ease-in-out;
+ 
+}
+
+
+
+.gone {
+  background-color: #000000;
+}
+
+.left {
+  background-color: #949494;
+}
+
+@media (max-width: 768px) {
+  input[type="date"], button {
+    font-size: 16px;
+  }
+  
+  .day {
+    width: 20px;
+    height: 20px;
+  }
+}
+
