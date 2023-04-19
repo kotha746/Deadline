@@ -1,0 +1,113 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  h1 {
+      font-size: 5em;
+      font-weight: 400;
+      margin: 10px;
+  }
+
+  h2 {
+      font-weight: 400;
+      margin: 10px;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+  
+  form {
+      margin: 10px;
+  }
+
+  label {
+      padding: 20px 20px 200px 0px;
+  }
+
+  button {
+      margin: 20px 20px 20px 0px;
+      padding: 5px 10px;
+      
+
+  }
+  .sidebar {
+    width: 33.33vw;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .sidebar_two {
+    width: 3.33vw;
+    padding: 20px;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: flex-start;
+  }
+  
+
+  #sidebar-text {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 20px;
+  }
+  
+  .visualization-wrapper {
+    width: 58.67vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .labels {
+    writing-mode: vertical-rl;
+    margin-left: 20px;
+    margin-top: 20px;
+    visibility: hidden;
+  }
+  
+  .label-top {
+    font-size: 20px;
+    margin-bottom: 50%;
+    color: #c73939;
+  }
+  
+  .label-bottom {
+    font-size: 20px;
+    margin-top: 50%;
+  }
+  
+  .day {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .gone {
+    background-color: #c73939;
+  }
+  
+  .left {
+    background-color: #949494;
+  }
+  
+  @media (max-width: 768px) {
+    input[type="date"], button {
+      font-size: 16px;
+    }
+    
+    .day {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
