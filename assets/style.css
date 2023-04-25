@@ -13,7 +13,7 @@ h1 {
 h2 {
     font-weight: 400;
     margin: 10px;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 .container {
   display: flex;
@@ -23,14 +23,28 @@ h2 {
 
 form {
     margin: 10px;
+    
 }
 
 label {
     padding: 20px 20px 200px 0px;
+    font-size: 1.5em;
+}
+
+input[type="date"] {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 8px;
+  font-family: 'DM Sans', sans-serif;
+  margin: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(50% - 22px);
 }
 
 button {
-    margin: 20px 20px 20px 0px;
+    margin: 20px 20px 0px 0px;
     padding: 10px 10px;
     font-size: 18px;
     border-radius: 5px;
@@ -38,10 +52,50 @@ button {
     background-color: #ccc;
 }
 
+.button_div {
+  align-items:center;
+}
+
 .scare_me {
   background-color: #c73939;
-  color: white;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
 
+.scare_me:hover {
+  background-color: #000000;
+  color: white;
+  font-size: 28px;
+
+
+}
+
+.scare_me:hover span {
+  display: none;
+}
+
+.scare_me:hover:before {
+  content: "\1F631";
+  font-size: 40px;
+  padding: 0px 20px;
+  margin: 0px;
+  display: inline-block;
+ 
+}
+
+.refresh-button {
+  background: none;
+  border: none;
+  padding: 0px;
+}
+
+.refresh-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.refresh-button:hover svg path {
+  fill: #c73939;
 }
 
 
@@ -62,14 +116,14 @@ button {
 
 
 #sidebar-text {
-  margin-top: 0px;
-  margin-bottom: 25px;
+  margin: 10px 10px 10px 10px;
   font-size: 1.5em;
   line-height: 1.5;
 }
 
 .days-gone {
   color: #c73939;
+  
 }
 
 
@@ -161,11 +215,11 @@ button {
   .container {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
   }
 
   .sidebar {
-    width: 90vw;
+    width: 90%;
     padding: 0px;
     margin: 10px;
     display: flex;
@@ -180,7 +234,7 @@ button {
   h2 {
       font-weight: 400;
       margin: 10px;
-      font-size: 1.25em;
+      font-size: 1em;
   }
   
   form {
@@ -189,7 +243,7 @@ button {
 
 label {
     padding: 20px 20px 200px 0px;
-    font-size: 20px;
+    font-size: 1.5em;
 }
 
 button {

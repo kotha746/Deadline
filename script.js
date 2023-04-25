@@ -42,11 +42,11 @@ function calculateDays() {
   const viewportHeight = window.innerHeight;
   const viewportWidth = window.innerWidth;
   const maxViewportSize = Math.max(viewportHeight, viewportWidth);
-  const circleSizeFactor = 1.15; // adjust
+  const circleSizeFactor = 1; // adjust
   let circleSize = Math.floor(maxViewportSize * circleSizeFactor / totalDays);
 
   // circle size adjustment
-  const minSize = 25;
+  const minSize = 20;
   if (circleSize < minSize) {
     circleSize = minSize;
   }
@@ -70,7 +70,7 @@ function calculateDays() {
   }
   visualization.innerHTML = circles;
 
-  const text = `Stop Procrastinating, Start working! <br> The Clock is ticking. <br><br> <span class="days-gone callout"> ${daysGone} days have gone by </span><br> <span class='days-left callout-urgent'>${daysLeft} DAYS LEFT</span>`;
+  const text = `Stop Procrastinating, Start working! <br><br> <span class="days-gone callout"> ${daysGone} days gone by! </span><br> <span class='days-left callout-urgent'>${daysLeft} DAYS LEFT</span>`;
   document.getElementById("sidebar-text").innerHTML = text;
 }
 
