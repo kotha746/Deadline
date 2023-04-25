@@ -3,11 +3,24 @@
 <head>
   <title>Countdown to Action</title>
   <link rel="stylesheet" type="text/css" href="assets/style.css">
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono&display=swap" rel="stylesheet">
   
+  <style>
+  @media print {
+  .sidebar {
+    display: block !important;
+    position: static !important;
+    visibility: visible !important;
+  }
+  .visualization-wrapper {
+    display: block !important;
+    position: static !important;
+    visibility: visible !important;
+  }
+}
+  </style>
 
 </head>
 
@@ -27,29 +40,26 @@
           <label for="end-date">End Date:</label>
           <input type="date" id="end-date" name="end-date" required><br>
 
-          <button type="button" onclick="calculateDays()">Scare me!</button>
+          <button type="button" onclick="calculateDays()" class="scare_me">Scare me!</button>
+          <button onclick="location.reload()">Start Over</button>
         </form>
       </div>
 
       <div id="sidebar-text"></div>
-
-      <!-- <div class="labels">
-        <div class="label-top">Days Gone By</div>
-        <div class="label-bottom">Days Left</div>
-      </div> -->
+      <div class="labels_text"></div>
 
     </div>
 
     <div class="sidebar_two">
-    <div class="labels">
-        <div class="label-top">Days Gone By</div>
-        <div class="label-bottom">Days Left</div>
-      </div>
+        <div class="labels">
+          <div class="label-top">Days Gone By</div>
+          <div class="label-bottom">Days Left</div>
+        </div>
     </div>
 
 
     <div class="visualization-wrapper">
-      <div id="visualization"></div>
+        <div id="visualization"></div>
     </div>
 
   </div>
@@ -58,3 +68,4 @@
 
 </body>
 </html>
+
