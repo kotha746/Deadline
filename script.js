@@ -70,7 +70,7 @@ function calculateDays() {
   }
   visualization.innerHTML = circles;
 
-  const text = `Stop Procrastinating, Start working! <br> The Clock is ticking. <br> <span class="days-gone callout"> ${daysGone} days have gone by </span><br> <span class='days-left callout-urgent'>${daysLeft} DAYS LEFT</span>`;
+  const text = `Stop Procrastinating, Start working! <br> The Clock is ticking. <br><br> <span class="days-gone callout"> ${daysGone} days have gone by </span><br> <span class='days-left callout-urgent'>${daysLeft} DAYS LEFT</span>`;
   document.getElementById("sidebar-text").innerHTML = text;
 }
 
