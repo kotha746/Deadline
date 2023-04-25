@@ -41,6 +41,7 @@ button {
 .scare_me {
   background-color: #c73939;
   color: white;
+
 }
 
 
@@ -52,12 +53,12 @@ button {
   justify-content: flex-start;
 }
 
-.sidebar_two {
+/* .sidebar_two {
   width: 3.33vw;
   padding: 20px;
   display: flex;
   justify-content: flex-start;
-}
+} */
 
 
 #sidebar-text {
@@ -117,7 +118,7 @@ button {
   
 }
 
-.labels {
+/* .labels {
   writing-mode: vertical-rl;
   margin-left: 20px;
   margin-top: 20px;
@@ -134,7 +135,7 @@ button {
 .label-bottom {
   font-size: 20px;
   margin-top: 50%;
-}
+} */
 
 .day {
   display: inline-block;
@@ -154,78 +155,86 @@ button {
   background-color: #949494;
 }
 
-
-
-
-
-
-@media (max-width: 768px) {
-  input[type="date"], button {
-    font-size: 16px;
-  }
+@media only screen and (max-width: 900px) {
   
-  .day {
-    width: 20px;
-    height: 20px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .sidebar {
+    width: 90vw;
+    padding: 0px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   h1 {
     font-size: 2em;
-    font-weight: 400;
-    margin: 10px;
+  }
+
+  h2 {
+      font-weight: 400;
+      margin: 10px;
+      font-size: 1.25em;
+  }
+  
+  form {
+    margin: 20px 10px;
+  }
+
+label {
+    padding: 20px 20px 200px 0px;
+    font-size: 20px;
 }
 
-h2 {
-  font-weight: 400;
-  margin: 10px;
-  font-size: 1.em;
+button {
+    margin: 25px 20px 20px 0px;
+    padding: 8px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ccc;
 }
 
-.container {
-  display:none;
-  flex-direction: column;
-  height: auto;
-  width: 100vw;
+#sidebar-text {
+  margin: 0px 10px;
+  font-size: 20px;
+  line-height: 1.5;
 }
 
-.sidebar {
-  width: 100vw;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+#sidebar-text span.days-left {
+  background-color: #c73939;
+  text-align: center;
+  border-radius: 10px;
+  border: white 2px solid;
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 10px;
+  display: block;
+  margin: 20px 0px;
+  width: 80vw;
 }
 
-.sidebar_two {
-  width: 100vw;
-  padding: 20px;
-  display: flex;
-  /* flex-direction: row;
-  /* justify-content: flex-start;*/
-}
+
 
 .visualization-wrapper {
-  width: 100vw;
+  width: 80vw;
+  align-self: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0px 20px;
+  
+}
+#visualization {
+  align-items: center;
 }
 
-}  
-
-
-@media print {
-  body * {
-    visibility: hidden;
-  }
-  .visualization-wrapper, #sidebar-text {
-    visibility: visible;
-  }
-  .visualization-wrapper {
-    margin-top: 0;
-  }
-  #sidebar-text {
-    margin-top: 50px;
-    font-size: 1.5em;
-  }
 }
+

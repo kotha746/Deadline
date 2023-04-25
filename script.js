@@ -74,13 +74,5 @@ function calculateDays() {
   document.getElementById("sidebar-text").innerHTML = text;
 }
 
-function togglePrint() {
-  const link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.type = "text/css";
-  link.href = "print.css";
-  document.head.appendChild(link);
-  window.print();
-  document.head.removeChild(link);
-}
+
 
