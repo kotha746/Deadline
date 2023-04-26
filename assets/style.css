@@ -10,6 +10,16 @@ h1 {
     margin: 10px;
 }
 
+.underline {
+  text-decoration: underline;
+  text-decoration-color: #c73939;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.15em;
+  
+}
+
+
 h2 {
     font-weight: 400;
     margin: 10px;
@@ -116,16 +126,23 @@ button {
 
 
 #sidebar-text {
-  margin: 10px 10px 10px 10px;
-  font-size: 1.5em;
-  line-height: 1.5;
+  margin: 20px 10px 10px 10px;
+  font-size: 1.25em;
+
 }
 
 .days-gone {
   color: #c73939;
-  
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1.5;
+
 }
 
+.days_gone_text {
+  line-height: 1;
+  font-size: 1.25em;
+}
 
 #sidebar-text span.days-left {
   background-color: #c73939;
@@ -137,7 +154,7 @@ button {
   font-weight: 500;
   padding: 10px;
   display: block;
-  margin: 50px 0px;
+  margin: 20px 0px;
 }
 
 /* #sidebar-text span.callout {
@@ -208,6 +225,8 @@ button {
 .left {
   background-color: #949494;
 }
+
+
 
 @media only screen and (max-width: 900px) {
   
